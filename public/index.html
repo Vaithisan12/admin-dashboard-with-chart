@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard with Charts</title>
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h2>Admin Panel</h2>
+    </div>
+    <ul class="sidebar-menu">
+      <li class="active"><a href="#">Dashboard</a></li>
+      <li><a href="#">Users</a></li>
+      <li><a href="#">Analytics</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Header -->
+    <header class="header">
+      <h1>Admin Dashboard</h1>
+      <div class="user-info">
+        <span class="username">Welcome, Admin</span>
+        <img src="https://i.pravatar.cc/40" alt="User Avatar" />
+      </div>
+    </header>
+
+    <!-- Statistics Cards -->
+    <section class="cards">
+      <div class="card">
+        <h3>Total Users</h3>
+        <p id="user-count">12,340</p>
+      </div>
+      <div class="card">
+        <h3>Revenue</h3>
+        <p>$56,800</p>
+      </div>
+      <div class="card">
+        <h3>Conversion Rate</h3>
+        <p>4.6%</p>
+      </div>
+      <div class="card">
+        <h3>New Orders</h3>
+        <p>120</p>
+      </div>
+    </section>
+
+    <!-- Charts Section -->
+    <section class="charts">
+      <div class="chart-container">
+        <h3>Monthly Sales</h3>
+        <canvas id="salesChart"></canvas>
+      </div>
+
+      <div class="chart-container">
+        <h3>User Growth</h3>
+        <canvas id="userChart"></canvas>
+      </div>
+
+      <div class="chart-container">
+        <h3>Traffic Sources</h3>
+        <canvas id="trafficChart"></canvas>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 Admin Dashboard. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
